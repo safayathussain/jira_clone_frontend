@@ -144,11 +144,11 @@ export function KanbanBoard({
                   <div
                     ref={provided.innerRef}
                     {...provided.droppableProps}
-                    className={`flex-1 rounded-xl p-2 transition-colors min-h-[150px] ${
+                    className={`flex-1 rounded-xl p-2 transition-colors min-h-[150px] h-full ${
                       snapshot.isDraggingOver ? "bg-muted/50" : "bg-muted/20"
                     }`}
                   >
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2 max-h-full overflow-y-auto">
                       {colIssues.map((issue, index) => (
                         <Draggable
                           key={issue.id.toString()}
